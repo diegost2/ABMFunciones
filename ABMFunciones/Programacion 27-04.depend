@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1524794172 source:c:\users\diego\desktop\tarea_programacion\programacion 27-04\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"funciones.h"
+
+1524793885 source:c:\users\diego\desktop\tarea_programacion\programacion 27-04\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"funciones.h"
+
+1524791407 c:\users\diego\desktop\tarea_programacion\programacion 27-04\funciones.h
+
