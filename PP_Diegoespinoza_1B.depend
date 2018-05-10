@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1525962553 source:d:\pp_diegoespinoza_1b\primer parcial\pp_diegoespinoza_1b\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Propietario.h"
+	"Automovil.h"
+
+1525957178 d:\pp_diegoespinoza_1b\primer parcial\pp_diegoespinoza_1b\propietario.h
+
+1525962606 source:d:\pp_diegoespinoza_1b\primer parcial\pp_diegoespinoza_1b\propietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Propietario.h"
+
+1525962606 source:d:\pp_diegoespinoza_1b\primer parcial\pp_diegoespinoza_1b\automovil.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Automovil.h"
+	"Propietario.h"
+
+1525963001 d:\pp_diegoespinoza_1b\primer parcial\pp_diegoespinoza_1b\automovil.h
+	"Propietario.h"
+
