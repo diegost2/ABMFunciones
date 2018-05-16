@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Automovil.h" />
+		<Unit filename="EgresoAutomovil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="EgresoAutomovil.h" />
 		<Unit filename="Propietario.c">
 			<Option compilerVar="CC" />
 		</Unit>

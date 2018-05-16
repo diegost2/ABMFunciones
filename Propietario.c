@@ -3,19 +3,22 @@
 #include <string.h>
 #include <conio.h>
 #include "Propietario.h"
+#include "EgresoAutomovil.h"
 #define OCUPADO 1
 #define LIBRE -1
 
-void Hardcodeo(ePropietario listado[],int limite)
+
+
+void Hardcodeo(ePropietario listado[])
 {
     int i;
 
-    int id[]= {1,2,3,4};
+    int id[]={1,2,3,4};
     char nombre[][20]={"Juan","Luis","Maria","Jose"};
     char tarjeta[][20]= {"111-111","222-222","333-333","444-444"};
     char direccion[][20]= {"mitre","urquiza","belgrano","alsina"};
 
-    for(i=0;i<limite;i++){
+    for(i=0;i<4;i++){
 
         strcpy(listado[i].NombreApellido,nombre[i]);
         strcpy(listado[i].TarjetaDeCredito,tarjeta[i]);
@@ -78,6 +81,7 @@ void ModificarAux(ePropietario listado[],int limite){
     int idEncontrado;
 
     int opcion;
+    system("cls");
     ePropietario AuxModificar;
     ePropietario_mostrarListado(listado,limite);
 
@@ -109,7 +113,7 @@ void ModificarAux(ePropietario listado[],int limite){
                             printf("Ingrese Nueva Direccion: ");
                             fflush(stdin);
                             gets(AuxModificar.direccion);*/
-                            printf("Ingrese Nueva Tarjeta de Credito");
+                            printf("Ingrese Nueva Tarjeta de Credito: ");
                             fflush(stdin);
                             gets(AuxModificar.TarjetaDeCredito);
 
@@ -165,7 +169,7 @@ void Aux_ALTA(ePropietario listado[],int limite)
             printf("Ingrese una Direccion: ");
             fflush(stdin);
             gets(direccion);
-            printf("Ingrese Tarjeta de Credito");
+            printf("Ingrese Tarjeta de Credito: ");
             fflush(stdin);
             gets(tarjetaCredito);
 
@@ -222,11 +226,11 @@ void ePropietario_mostrarListado(ePropietario listado[],int limite)
 
     int i;
     printf(" Nombres  ID  Direccion  Tarjeta de Credito \n");
+
     for(i=0; i<limite; i++)
         {
-            if(listado[i].estado!=-1)
+        if(listado[i].estado!=-1)
             {
-
                 ePropietario_mostrarUno(listado[i]);
             }
         }

@@ -27,3 +27,74 @@
 1525963001 d:\pp_diegoespinoza_1b\primer parcial\pp_diegoespinoza_1b\automovil.h
 	"Propietario.h"
 
+1526416847 source:c:\users\diego\desktop\abmfunciones-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Propietario.h"
+	"Automovil.h"
+
+1526416799 c:\users\diego\desktop\abmfunciones-master\propietario.h
+
+1526416841 c:\users\diego\desktop\abmfunciones-master\automovil.h
+	"Propietario.h"
+
+1526417127 source:c:\users\diego\desktop\abmfunciones-master\propietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Propietario.h"
+
+1526416841 source:c:\users\diego\desktop\abmfunciones-master\automovil.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Automovil.h"
+	"Propietario.h"
+
+1526497345 source:c:\users\diego\desktop\primer parcial lab1\propietario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Propietario.h"
+	"EgresoAutomovil.h"
+
+1526416799 c:\users\diego\desktop\primer parcial lab1\propietario.h
+
+1526497345 source:c:\users\diego\desktop\primer parcial lab1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Propietario.h"
+	"Automovil.h"
+	"EgresoAutomovil.h"
+
+1526428501 c:\users\diego\desktop\primer parcial lab1\automovil.h
+	"Propietario.h"
+
+1526487614 source:c:\users\diego\desktop\primer parcial lab1\automovil.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Automovil.h"
+	"Propietario.h"
+
+1526500032 source:c:\users\diego\desktop\primer parcial lab1\egresoautomovil.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"Automovil.h"
+	"EgresoAutomovil.h"
+	"Propietario.h"
+
+1526488104 c:\users\diego\desktop\primer parcial lab1\egresoautomovil.h
+	"Propietario.h"
+	"Automovil.h"
+

@@ -4,17 +4,25 @@
 #include <conio.h>
 #include "Propietario.h"
 #include "Automovil.h"
+#include "EgresoAutomovil.h"
 #define CANTIDADAUTO 20
-#define CANTIDADPROPI 5
+#define CANTIDADPROPI 20
+
 
 
 int main()
 {
     ePropietario propietario[CANTIDADPROPI];
     ePropietario_init(propietario,CANTIDADPROPI,-1);
-    //Hardcodeo(propietario,CANTIDADPROPI);
+
     eAutomovil automovil[CANTIDADAUTO];
     eAutomovil_init(automovil,CANTIDADAUTO,-1);
+
+    eEgresoAutomovil egresoAutomovil[CANTIDADAUTO];
+
+    Hardcodeo(propietario);
+    eAutomovil_HardCodeo(automovil);
+    Egreso_Hardcodeo(egresoAutomovil);
 
     char respuesta='s';
     int opcion;
@@ -56,8 +64,7 @@ int main()
             }
         case 5:
             {
-               // EngresoAuto(automovil,CANTIDADAUTO);
-               //ModificarAuxPRO(Productos,Usuarios,CANTIDADPRO,CANTIDADUSU);
+                EgresoAutomovil(automovil,propietario,egresoAutomovil,CANTIDADAUTO,CANTIDADPROPI);
                getch();
                break;
             }

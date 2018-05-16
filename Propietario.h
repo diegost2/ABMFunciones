@@ -20,4 +20,4 @@ int ePropietario_siguienteId(ePropietario listado[],int limite);
 void Aux_ALTA(ePropietario listado[],int limite);
 void ModificarAux(ePropietario listado[],int limite);
 void BajaAux(ePropietario listado[], int limite);
-void Hardcodeo(ePropietario listado[],int limite);
+void Hardcodeo(ePropietario listado[]);
