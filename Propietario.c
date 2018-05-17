@@ -28,50 +28,57 @@ void Hardcodeo(ePropietario listado[])
     }
 }
 
-void BajaAux(ePropietario listado[], int limite){
+void BajaAux(ePropietario listado[], int limite)
+{
+    clean();
     int valor;
     int idEncontrado;
 
     int opcion;
     ePropietario_mostrarListado(listado,limite);
+
     printf("\nIngrese ID de Propietario a dar de Baja: ");
     scanf("%d",&valor);
     idEncontrado=BuscarID(listado,limite,valor);
 
-            if(idEncontrado!=-1){
-                printf("Esta seguro de querer borrar al Propietario: %s ", listado[idEncontrado].NombreApellido);
-                printf("\n1)SI.");
-                printf("\n2)NO.");
-                printf("\nOpcion: ");
+            if(idEncontrado==-1)
+                {
+                    printf("Propietario no encontrado.");
+                    mensaje();
+                }
+            else if(idEncontrado!=-1)
+                {
+                clean();
+                printf("\nEsta seguro de querer borrar al Propietario: %s ", listado[idEncontrado].NombreApellido);
+                printf("\n\n1)SI.");
+                printf("\n\n2)NO.");
+                printf("\n\nOpcion: ");
                 scanf("%d",&opcion);
                 switch(opcion){
                     case 1:
                         {
                             listado[idEncontrado].estado=-1;
-                            system("cls");
+                            clean();
                             printf("Propietario Borrado con exito!");
-                            getch();
-
                             break;
                         }
                     case 2:
                         {
-                            printf("Baja Cancelada.");
-                            getch();
+                            clean();
+                            printf("\nBaja Cancelada.");
+                            mensaje();
                             break;
 
                         }
                     default:
                         {
+                            clean();
                             printf("Opcion incorrecta.");
-                            getch();
+                            mensaje();
                             break;
                         }
                     }
-                }
-            else{
-                    printf("Propietario no encontrado.");
-                    getch();
+
                 }
 }
 
@@ -81,7 +88,7 @@ void ModificarAux(ePropietario listado[],int limite){
     int idEncontrado;
 
     int opcion;
-    system("cls");
+    clean();
     ePropietario AuxModificar;
     ePropietario_mostrarListado(listado,limite);
 
@@ -91,45 +98,46 @@ void ModificarAux(ePropietario listado[],int limite){
     if(idEncontrado==-1)
                 {
                     printf("Usuario no encontrado.");
-                    getch();
+                    mensaje();
 
                 }
             else
                 {
+                clean();
                 printf("\nEsta seguro de querer modificar la tarjeta de credito al Propietario: %s ", listado[idEncontrado].NombreApellido);
-                printf("\n1)SI.");
-                printf("\n2)NO.");
-                printf("\nOpcion: ");
+                printf("\n\n1)SI.");
+                printf("\n\n2)NO.");
+                printf("\n\nOpcion: ");
                 scanf("%d",&opcion);
                 switch(opcion)
                 {
                     case 1:
                         {
-                            system("cls");
+                            clean();
 
-                            printf("Ingrese Nueva Tarjeta de Credito: ");
+                            printf("\nIngrese Nueva Tarjeta de Credito: ");
                             fflush(stdin);
                             gets(AuxModificar.TarjetaDeCredito);
 
                             strcpy(listado[idEncontrado].TarjetaDeCredito,AuxModificar.TarjetaDeCredito);
 
-                            system("cls");
-                            printf("Modificacion exitosa!");
-                            getch();
+                            clean();
+                            printf("\nModificacion exitosa!");
+                            mensaje();
 
                             break;
                         }
                     case 2:
                         {
                             printf("Modificacion Cancelada.");
-                            getch();
+                            mensaje();
                             break;
 
                         }
                     default:
                         {
                             printf("Opcion Incorrecta.");
-                            getch();
+                            mensaje();
                             break;
                         }
                     }
@@ -140,7 +148,7 @@ void ModificarAux(ePropietario listado[],int limite){
 
 void Aux_ALTA(ePropietario listado[],int limite)
 {
-    system("cls");
+    clean();
     char nombreApellido[50];
     int idPropietario;
     char direccion[50];
@@ -166,7 +174,7 @@ void Aux_ALTA(ePropietario listado[],int limite)
             fflush(stdin);
             gets(tarjetaCredito);
 
-            system("cls");
+            clean();
 
             strcpy(listado[indice].NombreApellido,nombreApellido);
             strcpy(listado[indice].direccion,direccion);

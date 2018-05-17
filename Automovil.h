@@ -18,4 +18,5 @@ void eAutomovil_mostrarListado(eAutomovil lista[],ePropietario listado[],int lim
 void eAutomovil_HardCodeo(eAutomovil lista[]);
 void Aux_ALTAAUTO(eAutomovil lista[],int limiteAutomovil);
 void mensaje(void);
+void clean(void);
 

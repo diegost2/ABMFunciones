@@ -45,7 +45,7 @@ void Aux_ALTAAUTO(eAutomovil lista[],int limiteAutomovil)
             getch();
         }
         else{
-
+            clean();
             printf("\nIngrese pantente: ");
             fflush(stdin);
             gets(automovilAux.patente);
@@ -129,4 +129,8 @@ void mensaje(void)
 {
     printf("\n\nPresione cualquier tecla para terminar...\n\n");
     getch();
+}
+void clean(void)
+{
+    system("cls");
 }

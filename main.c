@@ -103,13 +103,14 @@ int main()
             }
         default:
             {
-                printf("Opcion Incorrecta.");
+                clean();
+                printf("\nOpcion Incorrecta.");
                 mensaje();
                 break;
             }
 
         }
-        system("cls");
+        clean();
     }
     return 0;
 }

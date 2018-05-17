@@ -14,7 +14,7 @@
 
 void ListadoDeAutosEstacionadosOrdenados(ePropietario listado[], eAutomovil lista[],int limitePro, int limiteAuto)
 {
-    system("cls");
+    clean();
     int i,j;
     printf("\n\nMARCA  PATENTE   PROPIETARIO\n\n");
     for(i=0;i<limiteAuto;i++)
@@ -42,7 +42,7 @@ void ListadoDeAutosEstacionadosOrdenados(ePropietario listado[], eAutomovil list
 void MostrarPropietariosAudi(ePropietario listado[],eAutomovil lista[],int limitePro, int limiteAuto)
 {
     int i,j;
-    system("cls");
+    clean();
     printf("MARCA PROPIETARIO\n\n");
     for(i=0;i<limiteAuto;i++)
     {
@@ -58,7 +58,7 @@ void MostrarPropietariosAudi(ePropietario listado[],eAutomovil lista[],int limit
                         {
                             if(listado[j].estado!=-1)
                             {
-                                printf("     %s \n",listado[j].NombreApellido);
+                                printf("     %s \n\n",listado[j].NombreApellido);
                             }
 
                         }
@@ -75,6 +75,7 @@ void MostrarPropietariosAudi(ePropietario listado[],eAutomovil lista[],int limit
 
 void MostrarAutosPorPropietario(ePropietario listado[], eAutomovil lista[], int limitePro, int limiteAuto)
 {
+    clean();
     int j;
     int usuario;
     int indice;
@@ -84,13 +85,15 @@ void MostrarAutosPorPropietario(ePropietario listado[], eAutomovil lista[], int 
     scanf("%d",&usuario);
 
     indice=BuscarID(listado,limitePro,usuario);
-    printf("\n\nPROPIETARIO  PATENTE  MARCA");
+    clean();
+
     if(listado[indice].estado!=1)
     {
-        printf("\nID no encontrado.");
+        printf("\n\nID no encontrado.\n");
     }
     else
     {
+        printf("\n\nPROPIETARIO  PATENTE  MARCA");
         printf("\n\n  %s ",listado[indice].NombreApellido);
 
         for(j=0;j<limiteAuto;j++)
@@ -109,7 +112,7 @@ void MostrarAutosPorPropietario(ePropietario listado[], eAutomovil lista[], int 
 
 void EgresoAutomovil(eAutomovil lista[],ePropietario listado[] , eEgresoAutomovil egresos[], int limiteAutos, int limitePRO)
 {
-    system("cls");
+    clean();
     int i,j,k;
 
     PrecioPorEstadia(egresos,limiteAutos);
@@ -232,6 +235,7 @@ void RecaudacionTotal(eEgresoAutomovil egresos[],int limiteAutos)
 
 void RecaudacionTotalPorMarca(eEgresoAutomovil egresos[],int limiteAutos)
 {
+    clean();
     int i;
     float acumAR=0;
     float acumFE=0;
@@ -260,7 +264,7 @@ void RecaudacionTotalPorMarca(eEgresoAutomovil egresos[],int limiteAutos)
 
     }
     printf("\nRecaudacion total ALPHA_ROMEO: $%.2f",acumAR);
-    printf("\nRecaudacion total FERRARI: $%.2f",acumFE);
-    printf("\nRecaudacion total AUDI: $%.2f",acumAU);
-    printf("\nRecaudacion total OTROS: $%.2f",acumOT);
+    printf("\n\nRecaudacion total FERRARI: $%.2f",acumFE);
+    printf("\n\nRecaudacion total AUDI: $%.2f",acumAU);
+    printf("\n\nRecaudacion total OTROS: $%.2f\n",acumOT);
 }
