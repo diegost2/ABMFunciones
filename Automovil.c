@@ -54,7 +54,13 @@ void Aux_ALTAAUTO(eAutomovil lista[],int limiteAutomovil)
             fflush(stdin);
             scanf("%d",&automovilAux.marca);
 
+            printf("\nIngrese ID: ");
+            fflush(stdin);
+            scanf("%d",&automovilAux.idPropietario);
+
+
             strcpy(lista[indice].patente,automovilAux.patente);
+            lista[indice].idPropietario=automovilAux.idPropietario;
             lista[indice].idPropietario=id;
             lista[indice].marca=automovilAux.marca;
             lista[indice].estado=1;
@@ -113,33 +119,14 @@ void eAutomovil_init(eAutomovil lista[],int limite,int valor)
         for(i=0; i<limite; i++)
         {
             lista[i].estado= valor;
-            //listado[i].idProducto=0;
+
         }
 
 }
 
 
-/*void eAutomovil_mostrarListado(eAutomovil lista[],ePropietario listado[],int limite, int limiteAutomovil)
+void mensaje(void)
 {
-    int i;
-    int j;
-    printf(" Propietario     Marca      ID      Patente \n");
-    for(i=0; i<limite; i++)
-        {
-            if(listado[i].estado!=-1)
-            {
-                printf("  %s ", listado[i].NombreApellido);
-
-                for(j=0;j<limiteAutomovil;j++)
-                {
-                    if(listado[i].idPropietario==lista[j].idPropietario)
-                    {
-                        eAutomovil_mostrarUno(lista[j]);
-                        //break;
-                    }
-
-                }
-
-            }
-        }
-}*/
+    printf("\n\nPresione cualquier tecla para terminar...\n\n");
+    getch();
+}

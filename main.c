@@ -23,7 +23,6 @@ int main()
     Hardcodeo(propietario);
     eAutomovil_HardCodeo(automovil);
     Egreso_Hardcodeo(egresoAutomovil);
-
     char respuesta='s';
     int opcion;
 
@@ -34,8 +33,11 @@ int main()
         printf("\n3)BAJA ");
         printf("\n4)INGRESO AUTOMOVIL.");
         printf("\n5)EGRESO AUTOMOVIL. ");
-        //printf("\n6)CANCELAR PUBLICACION ");
-
+        printf("\n6)RECAUDACION TOTAL. ");
+        printf("\n7)RECAUDANCION POR MARCA. ");
+        printf("\n8)INFORMAR AUTOS DE CADA DUENO. ");
+        printf("\n9)MOSTRAR PROPIETAIOS DE AUDI. ");
+        printf("\n10)LISTADO DE AUTOS ORDENADOS POR PATENTE.");
         printf("\n\nOpcion: ");
         scanf("%d",&opcion);
 
@@ -54,7 +56,7 @@ int main()
         case 3:
             {
                 BajaAux(propietario,CANTIDADPROPI);
-                getch();
+                mensaje();
                 break;
             }
         case 4:
@@ -64,20 +66,46 @@ int main()
             }
         case 5:
             {
-                EgresoAutomovil(automovil,propietario,egresoAutomovil,CANTIDADAUTO,CANTIDADPROPI);
-               getch();
+               EgresoAutomovil(automovil,propietario,egresoAutomovil,CANTIDADAUTO,CANTIDADPROPI);
+               mensaje();
                break;
             }
         case 6:
             {
-                //BajaAuxPRO(Productos,Usuarios,CANTIDADPRO,CANTIDADUSU);
-                getch();
+                RecaudacionTotal(egresoAutomovil,CANTIDADAUTO);
+                mensaje();
                 break;
             }
-        //case 7:
+        case 7:
+            {
+
+                RecaudacionTotalPorMarca(egresoAutomovil,CANTIDADAUTO);
+                mensaje();
+                break;
+            }
+        case 8:
+            {
+                MostrarAutosPorPropietario(propietario,automovil,CANTIDADPROPI,CANTIDADAUTO);
+                mensaje();
+                break;
+            }
+        case 9:
+            {
+                MostrarPropietariosAudi(propietario,automovil,CANTIDADPROPI,CANTIDADAUTO);
+                mensaje();
+                break;
+            }
+        case 10:
+            {
+                ListadoDeAutosEstacionadosOrdenados(propietario,automovil,CANTIDADPROPI,CANTIDADAUTO);
+                mensaje();
+                break;
+            }
         default:
             {
                 printf("Opcion Incorrecta.");
+                mensaje();
+                break;
             }
 
         }

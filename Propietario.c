@@ -106,19 +106,11 @@ void ModificarAux(ePropietario listado[],int limite){
                     case 1:
                         {
                             system("cls");
-                            /*printf("Ingrese nuevo Nombre: ");
-                            fflush(stdin);
-                            gets(AuxModificar.NombreApellido);
 
-                            printf("Ingrese Nueva Direccion: ");
-                            fflush(stdin);
-                            gets(AuxModificar.direccion);*/
                             printf("Ingrese Nueva Tarjeta de Credito: ");
                             fflush(stdin);
                             gets(AuxModificar.TarjetaDeCredito);
 
-                            /*strcpy(listado[idEncontrado].NombreApellido,AuxModificar.NombreApellido);
-                            strcpy(listado[idEncontrado].direccion,AuxModificar.direccion);*/
                             strcpy(listado[idEncontrado].TarjetaDeCredito,AuxModificar.TarjetaDeCredito);
 
                             system("cls");
@@ -148,6 +140,7 @@ void ModificarAux(ePropietario listado[],int limite){
 
 void Aux_ALTA(ePropietario listado[],int limite)
 {
+    system("cls");
     char nombreApellido[50];
     int idPropietario;
     char direccion[50];
@@ -159,17 +152,17 @@ void Aux_ALTA(ePropietario listado[],int limite)
         if(indice == -1)
         {
             printf("No hay mas espacio para ingresar.");
-            getch();
+            mensaje();
         }
         else{
 
-            printf("Ingrese su nombre y apellido: ");
+            printf("\nIngrese su nombre: ");
             fflush(stdin);
             gets(nombreApellido);
-            printf("Ingrese una Direccion: ");
+            printf("\nIngrese una Direccion: ");
             fflush(stdin);
             gets(direccion);
-            printf("Ingrese Tarjeta de Credito: ");
+            printf("\nIngrese Tarjeta de Credito: ");
             fflush(stdin);
             gets(tarjetaCredito);
 

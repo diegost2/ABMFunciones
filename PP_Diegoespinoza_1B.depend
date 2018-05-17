@@ -65,7 +65,7 @@
 
 1526416799 c:\users\diego\desktop\primer parcial lab1\propietario.h
 
-1526497345 source:c:\users\diego\desktop\primer parcial lab1\main.c
+1526527104 source:c:\users\diego\desktop\primer parcial lab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -74,10 +74,10 @@
 	"Automovil.h"
 	"EgresoAutomovil.h"
 
-1526428501 c:\users\diego\desktop\primer parcial lab1\automovil.h
+1526525799 c:\users\diego\desktop\primer parcial lab1\automovil.h
 	"Propietario.h"
 
-1526487614 source:c:\users\diego\desktop\primer parcial lab1\automovil.c
+1526528060 source:c:\users\diego\desktop\primer parcial lab1\automovil.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -85,7 +85,7 @@
 	"Automovil.h"
 	"Propietario.h"
 
-1526500032 source:c:\users\diego\desktop\primer parcial lab1\egresoautomovil.c
+1526528060 source:c:\users\diego\desktop\primer parcial lab1\egresoautomovil.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -94,7 +94,7 @@
 	"EgresoAutomovil.h"
 	"Propietario.h"
 
-1526488104 c:\users\diego\desktop\primer parcial lab1\egresoautomovil.h
+1526526885 c:\users\diego\desktop\primer parcial lab1\egresoautomovil.h
 	"Propietario.h"
 	"Automovil.h"
 
