@@ -23,6 +23,7 @@ int main()
     Hardcodeo(propietario);
     eAutomovil_HardCodeo(automovil);
     Egreso_Hardcodeo(egresoAutomovil);
+
     char respuesta='s';
     int opcion;
 
@@ -97,7 +98,9 @@ int main()
             }
         case 10:
             {
+
                 ListadoDeAutosEstacionadosOrdenados(propietario,automovil,CANTIDADPROPI,CANTIDADAUTO);
+
                 mensaje();
                 break;
             }

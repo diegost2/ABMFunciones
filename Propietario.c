@@ -167,6 +167,9 @@ void Aux_ALTA(ePropietario listado[],int limite)
             printf("\nIngrese su nombre: ");
             fflush(stdin);
             gets(nombreApellido);
+            printf("\nIngrese su ID: ");
+            fflush(stdin);
+            scanf("%d",&idPropietario);
             printf("\nIngrese una Direccion: ");
             fflush(stdin);
             gets(direccion);
@@ -270,3 +273,4 @@ int ePropietario_buscarLugarLibre(ePropietario listado[],int limite)
 
     return retorno;
 }
+//

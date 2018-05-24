@@ -12,6 +12,43 @@
 #define AUDI 33
 #define OTROS 44
 
+void Ordenamiento(ePropietario listado[],eAutomovil lista[], int limiteAuto, int limitePro)
+{
+    int i,j;
+    char aux[20];
+    int auxInt;
+
+    for(i=0;i<limiteAuto;i++)
+    {
+        for(j=i+1;j<limiteAuto;j++)
+        {
+            if(strcmp(lista[i].patente,lista[j].patente)>0)
+            {
+                strcpy(aux,lista[i].patente);
+                strcpy(lista[i].patente,lista[j].patente);
+                strcpy(lista[j].patente,aux);
+
+                auxInt=lista[i].marca;
+                lista[i].marca=lista[j].marca;
+                lista[j].marca=auxInt;
+            }
+        }
+    }
+
+    for(i=0;i<limitePro;i++)
+    {
+        for(j=i+1;j<limitePro;j++)
+        {
+            if(strcmp(listado[i].NombreApellido,listado[j].NombreApellido)>0)
+            {
+                strcpy(aux,listado[i].NombreApellido);
+                strcpy(listado[i].NombreApellido,listado[j].NombreApellido);
+                strcpy(listado[j].NombreApellido,aux);
+            }
+        }
+    }
+}
+
 void ListadoDeAutosEstacionadosOrdenados(ePropietario listado[], eAutomovil lista[],int limitePro, int limiteAuto)
 {
     clean();
@@ -21,7 +58,7 @@ void ListadoDeAutosEstacionadosOrdenados(ePropietario listado[], eAutomovil list
     {
         if(lista[i].estado!=-1)
         {
-            printf(" %d    %s",lista[i].marca,lista[i].patente);
+            printf("\n%d    %s",lista[i].marca,lista[i].patente);
             for(j=0;j<limitePro;j++)
             {
                 if(listado[j].estado!=-1)
@@ -35,8 +72,9 @@ void ListadoDeAutosEstacionadosOrdenados(ePropietario listado[], eAutomovil list
                 }
             }
         }
-    }
 
+    }
+    //Ordenamiento(listado,lista,limiteAuto,limitePro);
 }
 
 void MostrarPropietariosAudi(ePropietario listado[],eAutomovil lista[],int limitePro, int limiteAuto)
@@ -102,7 +140,7 @@ void MostrarAutosPorPropietario(ePropietario listado[], eAutomovil lista[], int 
             {
                 if(lista[j].estado!=-1)
                 {
-                    printf("\t      %s   %d\n",lista[j].patente, lista[j].marca);
+                    printf("\t     %s   %d\n",lista[j].patente, lista[j].marca);
 
                 }
             }
@@ -128,13 +166,13 @@ void EgresoAutomovil(eAutomovil lista[],ePropietario listado[] , eEgresoAutomovi
 
                 for(j=0;j<limiteAutos;j++)
                 {
-                    if(listado[i].idPropietario==lista[j].idPropietario)
+                    if(lista[j].estado!=-1)
                     {
-                        if(lista[j].estado!=-1)
+                        if(listado[i].idPropietario==lista[j].idPropietario)
                         {
-                            printf("\t     %s    %d",lista[j].patente, lista[j].marca);
+                                printf("\t     %s    %d",lista[j].patente, lista[j].marca);
 
-                            for(k=0;k<limiteAutos;k++)
+                                for(k=0;k<limiteAutos;k++)
                                     {
                                     if(lista[j].marca==egresos[k].marca)
                                       {
@@ -268,3 +306,4 @@ void RecaudacionTotalPorMarca(eEgresoAutomovil egresos[],int limiteAutos)
     printf("\n\nRecaudacion total AUDI: $%.2f",acumAU);
     printf("\n\nRecaudacion total OTROS: $%.2f\n",acumOT);
 }
+//

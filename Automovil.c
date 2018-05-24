@@ -15,7 +15,7 @@
 
 void eAutomovil_HardCodeo(eAutomovil lista[])
 {
-     int id[]= {1,2,3,4,5,6,7,8,9,10};
+    int id[]= {1,2,3,4,5,6,7,8,9,10};
     char patente[][20]={"AAA-AAA","CCC-CCC","DDD-DDD","BBB-BBB","ZZZ-ZZZ","III-III","HHH-HHH","EEE-EEE","FFF-FFF","GGG-GGG"};
     int marca[]={ALPHA_ROMEO,AUDI,AUDI,FERRARI,FERRARI,AUDI,AUDI,OTROS,AUDI,ALPHA_ROMEO};
     int idPropietario[]={2,1,2,1,3,3,4,1,4,3};
@@ -37,7 +37,9 @@ void Aux_ALTAAUTO(eAutomovil lista[],int limiteAutomovil)
     eAutomovil automovilAux;
     int indice;
     int id;
+
     id=eAutomovil_siguienteId(lista,limiteAutomovil);
+
         indice = eAutomovil_buscarLugarLibre(lista,limiteAutomovil);
         if(indice == -1)
         {
@@ -56,11 +58,11 @@ void Aux_ALTAAUTO(eAutomovil lista[],int limiteAutomovil)
 
             printf("\nIngrese ID: ");
             fflush(stdin);
-            scanf("%d",&automovilAux.idPropietario);
+            scanf("%d",&id);
 
 
             strcpy(lista[indice].patente,automovilAux.patente);
-            lista[indice].idPropietario=automovilAux.idPropietario;
+            //lista[indice].idPropietario=automovilAux.idPropietario;
             lista[indice].idPropietario=id;
             lista[indice].marca=automovilAux.marca;
             lista[indice].estado=1;
@@ -134,3 +136,4 @@ void clean(void)
 {
     system("cls");
 }
+//

@@ -21,3 +21,4 @@ void RecaudacionTotalPorMarca(eEgresoAutomovil egresos[],int limiteAutos);
 void MostrarAutosPorPropietario(ePropietario listado[], eAutomovil lista[], int limitePro, int limiteAuto);
 void MostrarPropietariosAudi(ePropietario listado[],eAutomovil lista[],int limitePro, int limiteAuto);
 void ListadoDeAutosEstacionadosOrdenados(ePropietario listado[], eAutomovil lista[],int limitePro, int limiteAuto);
+void Ordenamiento(ePropietario listado[],eAutomovil lista[], int limiteAuto, int limitePro);
